@@ -13,9 +13,29 @@ const app = new Vue(
     {
         el: '#root',
         data: {
-            
+            lineTrough: 'line-trough',
+            todos: [
+                {
+                    text: 'Fare la spesa',
+                    done: true
+                },
+                {
+                    text: 'Pulire la casa',
+                    done: false
+                },
+                {
+                    text: 'Fare benzina della macchina',
+                    done: true
+                },
+                {
+                    text: 'Pagare bolletti',
+                    done: true
+                },
+                {
+                    text: 'Fare il bucato',
+                    done: false
+                },
+            ]
         },
-        methods: {
-           
-    }
+    }   
 );

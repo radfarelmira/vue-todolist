@@ -14,7 +14,40 @@
 <body>
 
     <div id="root">
+        <!-- HEADER -->
+        <header>
+            <h1>TO DO LIST</h1>
+        </header>
+        <!-- END HEADER -->
 
+        <!-- MAIN -->
+        <!-- Filters -->
+        <div class="filters">
+            <!-- Single Filter -->
+            <div class="single-filter">
+                <input type="text" placeholder="New to do">
+                <button>Aggiungi</button>
+            </div>
+        </div>
+        <!-- End Filters -->
+        
+        <!-- Todos -->
+        <div class="todos">
+            <ul>
+                <!-- Single Todo -->
+                <li v-for="element in todos" class="todo" :class="{'element.done': element.lineTrough}">
+                    {{ element.text }}
+
+                    <div class="todo-cross">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </li>
+                
+            </ul>
+
+        </div>
+        <!-- End Todos -->
+        <!-- END MAIN -->
     </div>
 
     <script type="text/javascript" src="js/script.js"></script>
