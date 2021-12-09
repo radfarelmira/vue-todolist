@@ -27,23 +27,28 @@ const app = new Vue(
             todos: [
                 {
                     text: 'Fare la spesa',
-                    done: true
+                    done: true,
+                    isActive: false
                 },
                 {
                     text: 'Pulire la casa',
-                    done: false
+                    done: false,
+                    isActive: false
                 },
                 {
                     text: 'Fare benzina della macchina',
-                    done: true
+                    done: true,
+                    isActive: false
                 },
                 {
                     text: 'Pagare bolletti',
-                    done: true
+                    done: true,
+                    isActive: false
                 },
                 {
                     text: 'Fare il bucato',
-                    done: false
+                    done: false,
+                    isActive: false
                 },
             ]
         },
@@ -63,6 +68,9 @@ const app = new Vue(
             },
             toggleDone: function (index) {
                 this.todos[index].done = !this.todos[index].done;
+            },
+            changeBg: function (element) {
+                element.isActive = !element.isActive;
             }
         }
     }   

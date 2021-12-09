@@ -36,10 +36,12 @@
             <ul>
                 <!-- Single Todo -->
                 <li
+                @mouseenter="changeBg(element)"
+                @mouseleave="changeBg(element)"
                 @click="toggleDone(index)"
                 v-for="(element, index) in todos" 
                 class="todo" 
-                :class="{'done': element.done}"
+                :class="{'done': element.done, 'active': element.isActive}"
                 >
                     {{ element.text }}
 
