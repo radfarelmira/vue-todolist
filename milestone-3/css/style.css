@@ -60,3 +60,7 @@ header h1{
 .done{
     text-decoration: line-through;
 }
+
+.todos li:hover{
+    background-color: white;
+}

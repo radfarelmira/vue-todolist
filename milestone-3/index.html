@@ -35,7 +35,12 @@
         <div class="todos">
             <ul>
                 <!-- Single Todo -->
-                <li v-for="(element, index) in todos" class="todo" :class="{'done': element.done}">
+                <li
+                @click="toggleDone(index)"
+                v-for="(element, index) in todos" 
+                class="todo" 
+                :class="{'done': element.done}"
+                >
                     {{ element.text }}
 
                     <div class="todo-cross">
