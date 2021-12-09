@@ -35,11 +35,11 @@
         <div class="todos">
             <ul>
                 <!-- Single Todo -->
-                <li v-for="element in todos" class="todo" :class="{'done': element.done}">
+                <li v-for="(element, index) in todos" class="todo" :class="{'done': element.done}">
                     {{ element.text }}
 
                     <div class="todo-cross">
-                        <i class="fas fa-times"></i>
+                        <i @click="deletTodo(index)" class="fas fa-times"></i>
                     </div>
                 </li>
                 
