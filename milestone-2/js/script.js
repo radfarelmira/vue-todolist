@@ -15,7 +15,6 @@ const app = new Vue(
     {
         el: '#root',
         data: {
-            lineTrough: 'line-trough',
             todos: [
                 {
                     text: 'Fare la spesa',
@@ -42,7 +41,8 @@ const app = new Vue(
         methods: {
             deletTodo: function(index){
                 this.todos.splice(index, 1);
-            }
+            },
+            
         }
     }   
 );
