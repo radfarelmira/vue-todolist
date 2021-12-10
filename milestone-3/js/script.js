@@ -61,7 +61,8 @@ const app = new Vue(
                 if (trimNewTodoText.length > 2){
                     this.todos.push({
                         text: trimNewTodoText,
-                        done: false
+                        done: false,
+                        isActive: false
                     });
                     this.newTodoText= '';
                 }
